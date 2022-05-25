@@ -51,6 +51,9 @@ public class Charcy {
 
 	@Override
 	public String toString() {
-		return "Charcy []";
+		System.out.println("Charcy Number: " + charcyNumber);
+		System.out.println("Type: " + type);
+		System.out.println();
+		return "";
 	}
 }

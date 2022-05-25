@@ -2,6 +2,7 @@ package com.ty.onetoonebi.dao;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,7 +19,7 @@ public class Vehicle {
 	private int cost;
 
 	//@OneToOne (cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE}) 
-	@OneToOne( cascade = CascadeType.ALL)// for All  the Crud Operations
+	@OneToOne( cascade = CascadeType.ALL, fetch = FetchType.LAZY)// for All  the Crud Operations
 	@JoinColumn
 	private Charcy charcy;
 
@@ -56,6 +57,10 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle []";
+		
+		System.out.println("Id: " + id);
+		System.out.println("Name: " + name);
+		System.out.println("Cost: " + cost);
+		return "";
 	}
 }
