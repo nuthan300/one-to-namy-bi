@@ -19,7 +19,7 @@ public class Vehicle {
 	private int cost;
 
 	//@OneToOne (cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE}) 
-	@OneToOne( cascade = CascadeType.ALL, fetch = FetchType.LAZY)// for All  the Crud Operations
+	@OneToOne( cascade = CascadeType.ALL, fetch = FetchType.EAGER)// for All  the Crud Operations
 	@JoinColumn
 	private Charcy charcy;
 
